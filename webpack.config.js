@@ -6,6 +6,9 @@ module.exports = {
     path: __dirname + '/build',
     filename: 'bundle.js'
   },
+  devServer: {
+    port: 3001
+  },
   module: {
     loaders: [
       {
