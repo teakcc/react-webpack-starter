@@ -1,13 +1,17 @@
 var webpack = require('webpack');
 
 module.exports = {
-  entry: './scripts/main.js',
+  entry: [
+    'webpack/hot/only-dev-server',
+    './scripts/main.js'
+  ],
   output: {
     path: __dirname + '/build',
     filename: 'bundle.js'
   },
   devServer: {
-    port: 3001
+    port: 3001,
+    inline: true
   },
   module: {
     loaders: [
@@ -21,5 +25,8 @@ module.exports = {
         loader: 'style!css!sass'
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.NoErrorsPlugin()
+  ]
 };
