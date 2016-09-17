@@ -4,7 +4,8 @@
   "description": "A webapp using React, Webpack, ES6, Babel and so on.",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --hot --progress --colors --display-error-details",
+    "start": "NODE_ENV=production node server.js",
+    "dev": "webpack-dev-server --hot --progress --colors --display-error-details",
     "build": "webpack --hot --progress --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
