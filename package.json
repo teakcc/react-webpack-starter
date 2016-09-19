@@ -6,7 +6,7 @@
   "scripts": {
     "start": "NODE_ENV=production node server.js",
     "dev": "webpack-dev-server --hot --progress --colors --display-error-details",
-    "build": "webpack --hot --progress --colors",
+    "build": "webpack --config ./webpack.production.config.js --progress --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

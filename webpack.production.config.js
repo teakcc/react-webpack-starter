@@ -1,25 +1,19 @@
 /**
- * webpack config development
+ * webpack config production
  */
 'use strict';
 
-var webpack = require('webpack');
+var webpack =  require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  devtool: 'source-map',
   entry: [
-    'webpack/hot/only-dev-server',
     './scripts/main.js'
   ],
   output: {
     path: __dirname + '/build',
     filename: 'bundle.js',
     publicPath: 'build'
-  },
-  devServer: {
-    port: 3001,
-    inline: true
   },
   module: {
     loaders: [
@@ -28,10 +22,6 @@ module.exports = {
         loaders: ['babel-loader'],
         exclude: /node_modules/
       },
-      // {
-      //   test: /\.scss?$/,
-      //   loader: 'style!css!sass'
-      // },
       {
         test: /\.css?$/,
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')
@@ -39,7 +29,13 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin('home.css')
+    new ExtractTextPlugin('home.css'),
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      compressor: {
+        warnings: false,
+        screw_ie8: true
+      }
+    })
   ]
 };
