@@ -7,7 +7,7 @@ export default class TopBanner extends Component {
     return (
       <div className="top-banner">
         <div className="top-banner-container">
-          Top Banner
+          React Webpack SPA
         </div>
       </div>
     );

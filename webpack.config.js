@@ -10,16 +10,17 @@ module.exports = {
   devtool: 'source-map',
   entry: [
     'webpack/hot/only-dev-server',
-    './scripts/main.js'
+    './app.js'
   ],
   output: {
     path: __dirname + '/build',
     filename: 'bundle.js',
-    publicPath: 'build'
+    publicPath: 'build/'
   },
   devServer: {
     port: 3001,
-    inline: true
+    inline: true,
+    historyApiFallback: true
   },
   module: {
     loaders: [
@@ -40,6 +41,6 @@ module.exports = {
   },
   plugins: [
     new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin('home.css')
+    new ExtractTextPlugin('main.css')
   ]
 };
