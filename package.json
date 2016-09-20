@@ -1,7 +1,7 @@
 {
   "name": "react-webpack-webapp",
-  "version": "0.0.1",
-  "description": "A webapp using React, Webpack, ES6, Babel and so on.",
+  "version": "0.1.0",
+  "description": "A single page application using React, Webpack, ES6, Babel and so on.",
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=production node server.js",
