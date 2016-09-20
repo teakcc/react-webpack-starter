@@ -10,7 +10,6 @@ module.exports = {
   devtool: 'source-map',
   entry: [
     'webpack/hot/only-dev-server',
-    // './scripts/main.js'
     './app.js'
   ],
   output: {
@@ -42,6 +41,6 @@ module.exports = {
   },
   plugins: [
     new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin('home.css')
+    new ExtractTextPlugin('main.css')
   ]
 };

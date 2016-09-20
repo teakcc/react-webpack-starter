@@ -20,6 +20,13 @@ const routes = {
           callback(null, require('../pages/page2').default);
         });
       }
+    }, {
+      path: 'login',
+      getComponent: (location, callback) => {
+        require.ensure([], (require) => {
+          callback(null, require('../pages/login').default);
+        });
+      }
     }]
   }]
 };
