@@ -10,7 +10,8 @@ module.exports = {
   devtool: 'source-map',
   entry: [
     'webpack/hot/only-dev-server',
-    './scripts/main.js'
+    // './scripts/main.js'
+    './app.js'
   ],
   output: {
     path: __dirname + '/build',
@@ -19,7 +20,8 @@ module.exports = {
   },
   devServer: {
     port: 3001,
-    inline: true
+    inline: true,
+    historyApiFallback: true
   },
   module: {
     loaders: [
