@@ -1,7 +1,6 @@
 /**
  * webpack config production
  */
-'use strict';
 
 var webpack =  require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
