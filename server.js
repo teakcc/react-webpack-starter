@@ -1,4 +1,6 @@
-'use strict';
+/**
+ * Redux Webpack SPA server
+ */
 
 var express = require('express');
 var path = require('path');

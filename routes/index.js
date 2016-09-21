@@ -10,7 +10,7 @@ const routes = {
       path: 'page1',
       getComponent: (location, callback) => {
         require.ensure([], (require) => {
-          callback(null, require('../pages/page1').default)
+          callback(null, require('../pages/page1').default);
         });
       }
     }, {
