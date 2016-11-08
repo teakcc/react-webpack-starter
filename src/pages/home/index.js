@@ -1,3 +1,5 @@
+import './index.scss';
+
 import React, { Component } from 'react';
 import TopBanner from '../../components/top-banner';
 import Content from '../../components/content';

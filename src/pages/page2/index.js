@@ -1,13 +1,15 @@
+import './index.scss';
+
 import React, { Component } from 'react';
 import Content from '../../components/content';
 import Footer from '../../components/footer';
 
-class Login extends Component {
+class Page2 extends Component {
   render() {
     return (
       <div>
         <Content>
-          <div className="login placeholder">Login</div>
+          <div className="page2 placeholder">Page2</div>
         </Content>
         <Footer/>
       </div>
@@ -15,4 +17,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default Page2;

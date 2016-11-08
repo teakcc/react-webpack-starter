@@ -1,5 +1,5 @@
 /**
- * webpack config development
+ * Webpack Development Config
  */
 
 var webpack = require('webpack');
@@ -9,12 +9,12 @@ module.exports = {
   devtool: 'source-map',
   entry: [
     'webpack/hot/only-dev-server',
-    './app.js'
+    './src/app.js'
   ],
   output: {
-    path: __dirname + '/build',
-    filename: 'bundle.js',
-    publicPath: 'build/'
+    path: __dirname + '/dist',
+    publicPath: 'dist/',
+    filename: 'build.js'
   },
   devServer: {
     port: 3001,
@@ -25,7 +25,7 @@ module.exports = {
     loaders: [
       {
         test: /\.js?$/,
-        loaders: ['babel-loader'],
+        loader: 'babel',
         exclude: /node_modules/
       },
       // {
@@ -33,13 +33,13 @@ module.exports = {
       //   loader: 'style!css!sass'
       // },
       {
-        test: /\.css?$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')
+        test: /\.scss?$/,
+        loader: ExtractTextPlugin.extract('style', 'css!sass')
       }
     ]
   },
   plugins: [
     new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin('main.css')
+    new ExtractTextPlugin('build.css')
   ]
 };

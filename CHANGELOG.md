@@ -1,3 +1,9 @@
+## [v0.1.1]
+> Nov, 8, 2016
+
+- rebuild directory structure
+- every component import css by itself
+
 ## [v0.1.0]
 > Sep, 20, 2016
 

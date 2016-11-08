@@ -1,5 +1,5 @@
 /**
- * webpack config production
+ * Webpack Production Config
  */
 
 var webpack =  require('webpack');
@@ -7,28 +7,28 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: [
-    './app.js'
+    './src/app.js'
   ],
   output: {
-    path: __dirname + '/build',
-    filename: 'bundle.js',
-    publicPath: 'build/'
+    path: __dirname + '/dist',
+    publicPath: 'dist/',
+    filename: 'build.js'
   },
   module: {
     loaders: [
       {
         test: /\.js?$/,
-        loaders: ['babel-loader'],
+        loader: 'babel',
         exclude: /node_modules/
       },
       {
-        test: /\.css?$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')
+        test: /\.scss?$/,
+        loader: ExtractTextPlugin.extract('style', 'css!sass')
       }
     ]
   },
   plugins: [
-    new ExtractTextPlugin('main.css'),
+    new ExtractTextPlugin('build.css'),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compressor: {

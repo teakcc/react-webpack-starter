@@ -1,3 +1,5 @@
+import './index.scss';
+
 import React, { Component } from 'react';
 import Content from '../../components/content';
 import Footer from '../../components/footer';
