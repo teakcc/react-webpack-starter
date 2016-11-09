@@ -4,6 +4,12 @@
 
 var webpack =  require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var CleanWebpackPlugin = require('clean-webpack-plugin');
+
+var config = {
+  publicPath: 'http://127.0.0.1:3000/'
+};
 
 module.exports = {
   entry: [
@@ -11,8 +17,8 @@ module.exports = {
   ],
   output: {
     path: __dirname + '/dist',
-    publicPath: 'dist/',
-    filename: 'build.js'
+    publicPath: config.publicPath,
+    filename: 'static/build-[chunkhash:8].js'
   },
   module: {
     loaders: [
@@ -28,7 +34,14 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin('build.css'),
+    new CleanWebpackPlugin(['dist']),
+    new ExtractTextPlugin('static/build-[contenthash:8].css'),
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+      minify: {
+        collapseWhitespace: true
+      }
+    }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compressor: {

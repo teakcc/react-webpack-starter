@@ -3,7 +3,11 @@
  */
 
 var webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+
+var config = {
+  publicPath: 'http://127.0.0.1:3001/'
+};
 
 module.exports = {
   devtool: 'source-map',
@@ -13,12 +17,13 @@ module.exports = {
   ],
   output: {
     path: __dirname + '/dist',
-    publicPath: 'dist/',
+    publicPath: config.publicPath,
     filename: 'build.js'
   },
   devServer: {
     port: 3001,
     inline: true,
+    hot: true,
     historyApiFallback: true
   },
   module: {
@@ -28,18 +33,17 @@ module.exports = {
         loader: 'babel',
         exclude: /node_modules/
       },
-      // {
-      //   test: /\.scss?$/,
-      //   loader: 'style!css!sass'
-      // },
       {
         test: /\.scss?$/,
-        loader: ExtractTextPlugin.extract('style', 'css!sass')
+        // loader: 'style!css?sourceMap!sass'
+        loader: 'style!css!sass'
       }
     ]
   },
   plugins: [
     new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin('build.css')
+    new HtmlWebpackPlugin({
+      template: './src/index.html'
+    })
   ]
 };

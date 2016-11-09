@@ -1,3 +1,9 @@
+## [v0.1.2]
+> Nov, 9, 2016
+
+- use `html-webpack-plugin` to generate html file
+- webpack config file optimize
+
 ## [v0.1.1]
 > Nov, 8, 2016
 
