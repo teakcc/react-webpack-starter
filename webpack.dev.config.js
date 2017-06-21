@@ -27,21 +27,20 @@ module.exports = {
     historyApiFallback: true
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js?$/,
-        loader: 'babel',
+        loader: 'babel-loader',
         exclude: /node_modules/
       },
       {
         test: /\.scss?$/,
-        // loader: 'style!css?sourceMap!sass'
-        loader: 'style!css!sass'
+        use: ['style-loader', 'css-loader', 'sass-loader']
       }
     ]
   },
   plugins: [
-    new webpack.NoErrorsPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html'
     })
