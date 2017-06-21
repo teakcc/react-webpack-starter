@@ -1,15 +1,31 @@
 import './styles/index.scss';
 
-import React from 'react';
+import React, { Component } from 'react';
 import { render } from 'react-dom';
-import { Router, browserHistory } from 'react-router';
+import {
+  HashRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
 
-import App from './pages/App';
-import routes from './routes';
+import Header from './components/header';
+import Home from './pages/home';
+import Page1 from './pages/page1';
+import Page2 from './pages/page2';
+import Login from './pages/login';
 
-render((
-  <Router
-    history={browserHistory}
-    routes={routes}
-  />
-), document.getElementById('app'));
+const App = () => (
+  <Router>
+    <div>
+      <Header/>
+      <Route exact path="/" component={Home}/>
+      <Route path="/page1" component={Page1}/>
+      <Route path="/page2" component={Page2}/>
+      <Route path="/login" component={Login}/>
+    </div>
+  </Router>
+);
+
+
+
+render(<App/>, document.getElementById('app'));

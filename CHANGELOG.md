@@ -1,3 +1,11 @@
+## [v0.2.0]
+> June, 21, 2017
+
+- update webpack to v2.x
+- update react-router to v4.x
+- update react and react-dom
+- other package update 
+
 ## [v0.1.2]
 > Nov, 9, 2016
 

@@ -27,6 +27,6 @@ npm run dev
 
 Then open up [http://127.0.0.1:3001](http://127.0.0.1:3001) to preview the demo, the browser will auto refresh on file changes.
 
-## license
+## License
 
 [MIT LICENSE](./LICENSE)
