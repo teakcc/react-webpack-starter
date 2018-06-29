@@ -14,11 +14,15 @@ const config = {
 };
 
 module.exports = {
-  entry: './src/app.js',
+  entry: {
+    vendor: ['react', 'react-dom', 'redux'],
+    client: './src/app.js'
+  },
   output: {
     path: __dirname + '/dist',
     publicPath: config.publicPath,
-    filename: 'static/build-[chunkhash:8].js'
+    filename: 'static/[name].[chunkhash:8].bundle.js',
+    chunkFilename: 'static/[name].[chunkhash:8].bundle.js'
   },
   module: {
     rules: [
@@ -46,7 +50,20 @@ module.exports = {
         sourceMap: false
       }),
       new OptimizeCssAssetsPlugin()
-    ]
+    ],
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          chunks: 'all',
+          name: 'vendor',
+          test: 'vendor',
+          enforce: true
+        },
+      }
+    },
+    runtimeChunk: {
+      name: 'runtime'
+    }
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
@@ -57,8 +74,8 @@ module.exports = {
       }
     }),
     new MiniCssExtractPlugin({
-      filename: 'static/build-[contenthash:8].css',
-      chunkFilename: '[id].css'
+      filename: 'static/[name].[contenthash:8].bundle.css',
+      chunkFilename: 'static/[name].[contenthash:8].bundle.css'
     })
   ]
 };

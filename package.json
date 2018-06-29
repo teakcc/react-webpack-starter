@@ -1,5 +1,5 @@
 {
-  "name": "react-webpack-webapp",
+  "name": "react-webpack-spa",
   "version": "0.1.0",
   "description": "A single page application using React, Webpack, ES6, Babel and so on.",
   "main": "index.js",
@@ -28,7 +28,8 @@
     "express": "^4.15.3",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-router-dom": "^4.3.1"
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
