@@ -1,6 +1,6 @@
-# React Webpack SPA
+# Go React PWA
 
-A simple single page application based on React v16 and Webpack v4.
+Progressive web app with React and Go, support Server Side Rendering
 
 ## Usage
 

@@ -1,17 +1,18 @@
 {
-  "name": "react-webpack-spa",
+  "name": "go-react-pwa",
   "version": "0.1.0",
   "description": "A single page application using React, Webpack, ES6, Babel and so on.",
   "main": "index.js",
   "scripts": {
-    "server": "NODE_ENV=production node server.js",
+    "server": "go run server.go",
+    "server-express": "NODE_ENV=production node server.js",
     "start": "webpack-dev-server --config ./webpack.dev.config.js --inline --hot --progress --colors",
     "build": "webpack --config ./webpack.prod.config.js --progress --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wangchi/react-webpack-webapp.git"
+    "url": "git+https://github.com/wangchi/go-react-pwa.git"
   },
   "keywords": [
     "react",
@@ -21,9 +22,9 @@
   "author": "Wang Chi <hiwangchi@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wangchi/react-webpack-webapp/issues"
+    "url": "https://github.com/wangchi/go-react-pwa/issues"
   },
-  "homepage": "https://github.com/wangchi/react-webpack-webapp#readme",
+  "homepage": "https://github.com/wangchi/go-react-pwa#readme",
   "dependencies": {
     "express": "^4.15.3",
     "react": "^16.4.1",
