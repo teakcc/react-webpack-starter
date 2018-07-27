@@ -4,8 +4,7 @@
   "description": "A single page application using React, Webpack, ES6, Babel and so on.",
   "main": "index.js",
   "scripts": {
-    "server": "go run server.go",
-    "server-express": "NODE_ENV=production node server.js",
+    "server": "NODE_ENV=production node server.js",
     "start": "webpack-dev-server --config ./webpack.dev.config.js --inline --hot --progress --colors",
     "build": "webpack --config ./webpack.prod.config.js --progress --colors",
     "test": "echo \"Error: no test specified\" && exit 1"

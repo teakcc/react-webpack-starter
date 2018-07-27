@@ -1,6 +1,6 @@
-# Go React PWA
+# React Webpack SPA
 
-Progressive web app with React and Go, support Server Side Rendering
+Single page application with React, React-Router, Redux and Webpack.
 
 ## Usage
 
