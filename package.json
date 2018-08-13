@@ -1,6 +1,6 @@
 {
-  "name": "go-react-pwa",
-  "version": "0.1.0",
+  "name": "react-webpack-spa",
+  "version": "1.0.0",
   "description": "A single page application using React, Webpack, ES6, Babel and so on.",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wangchi/go-react-pwa.git"
+    "url": "git+https://github.com/wangchi/react-webpack-spa.git"
   },
   "keywords": [
     "react",
@@ -21,9 +21,9 @@
   "author": "Wang Chi <hiwangchi@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wangchi/go-react-pwa/issues"
+    "url": "https://github.com/wangchi/react-webpack-spa/issues"
   },
-  "homepage": "https://github.com/wangchi/go-react-pwa#readme",
+  "homepage": "https://github.com/wangchi/react-webpack-spa#readme",
   "dependencies": {
     "express": "^4.15.3",
     "react": "^16.4.1",
@@ -40,6 +40,7 @@
     "css-loader": "^0.28.11",
     "eslint": "^3.5.0",
     "eslint-plugin-react": "^6.3.0",
+    "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.4.0",
     "node-sass": "^4.9.0",

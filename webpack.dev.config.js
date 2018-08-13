@@ -11,7 +11,7 @@ const config = {
 
 module.exports = {
   devtool: 'source-map',
-  entry: './src/app.js',
+  entry: './src/index.js',
   output: {
     path: __dirname + '/dist',
     publicPath: config.publicPath,
@@ -33,6 +33,20 @@ module.exports = {
       {
         test: /\.scss?$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.(jpe?g|png|gif)$/,
+        loader: 'file-loader',
+        options: {
+          name: 'images/[name].[ext]'
+        }
+      },
+      {
+        test: /\.(svg|woff2?|eot|ttf|otf)$/,
+        loader: 'file-loader',
+        options: {
+          name: 'fonts/[name].[ext]'
+        }
       }
     ]
   },

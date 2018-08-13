@@ -4,12 +4,12 @@ import React, { Component } from 'react';
 import Content from '../../components/content';
 import Footer from '../../components/footer';
 
-class Login extends Component {
+class About extends Component {
   render() {
     return (
       <div>
         <Content>
-          <div className="login placeholder">Login</div>
+          <div className="about placeholder">About us</div>
         </Content>
         <Footer/>
       </div>
@@ -17,4 +17,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default About;

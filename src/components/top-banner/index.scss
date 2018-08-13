@@ -1,12 +1,12 @@
 .top-banner {
   width: 100%;
   height: 400px;
-  background-color: #24282C;
+  background: #24282C url(../../images/adi-constantin-65004-unsplash.jpg) no-repeat center bottom;
+  background-size: cover;
 }
 
 .top-banner-container {
-  background-color: #24282C;
-
+  background-color: rgba(0, 0, 0, .2);
   text-align: center;
   line-height: 400px;
   font-size: 80px;

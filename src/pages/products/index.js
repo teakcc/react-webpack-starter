@@ -4,12 +4,12 @@ import React, { Component } from 'react';
 import Content from '../../components/content';
 import Footer from '../../components/footer';
 
-class Page1 extends Component {
+class Products extends Component {
   render() {
     return (
       <div>
         <Content>
-          <div className="page1 placeholder">Page1</div>
+          <div className="products placeholder">Products</div>
         </Content>
         <Footer/>
       </div>
@@ -17,4 +17,4 @@ class Page1 extends Component {
   }
 }
 
-export default Page1;
+export default Products;
