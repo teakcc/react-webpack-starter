@@ -1,19 +1,21 @@
 /**
  * Webpack Testing Config
  */
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const merge = require('webpack-merge');
 
-let baseConfig = require('./webpack.base.config.js');
+const baseConfig = require('./webpack.base.config.js');
 
 const config = {
   publicPath: '/'
 };
 
-module.exports = Object.assign(baseConfig, {
+const testingConfig = {
   mode: 'production',
   output: {
     path: __dirname + '/build_test',
@@ -76,7 +78,9 @@ module.exports = Object.assign(baseConfig, {
     }
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin({
+      verbose: true
+    }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       minify: {
@@ -88,4 +92,6 @@ module.exports = Object.assign(baseConfig, {
       chunkFilename: 'static/[name].[contenthash:8].css'
     })
   ]
-});
+};
+
+module.exports = merge(baseConfig, testingConfig);

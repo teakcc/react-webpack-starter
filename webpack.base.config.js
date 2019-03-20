@@ -18,6 +18,9 @@ module.exports = {
     publicPath: config.publicPath,
     filename: '[name].js'
   },
+  resolve: {
+    extensions: ['.js', '.jsx', '.json'],
+  },
   module: {
     rules: [
       {

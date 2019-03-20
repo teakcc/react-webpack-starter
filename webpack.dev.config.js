@@ -2,9 +2,10 @@
  * Webpack Development Config
  */
 
-let baseConfig = require('./webpack.base.config.js');
+const baseConfig = require('./webpack.base.config.js');
+const merge = require('webpack-merge');
 
-module.exports = Object.assign(baseConfig, {
+const devConfig = {
   mode: 'development',
   devtool: 'source-map',
   devServer: {
@@ -14,9 +15,10 @@ module.exports = Object.assign(baseConfig, {
     historyApiFallback: true
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.json'],
     alias: {
       'react-dom': '@hot-loader/react-dom'
     }
   }
-});
+};
+
+module.exports = merge(baseConfig, devConfig);
