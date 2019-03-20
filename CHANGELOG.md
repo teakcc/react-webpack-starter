@@ -1,10 +1,24 @@
+## [v1.0.1]
+> Mar, 20, 2019
+
+- update UI and text
+- last classical version, next version will use a UI library to add more examples, and babel will upgrade to babel 7
+
+
+## [v1.0.0]
+> June, 29, 2018
+
+- update webpack to v4.x
+- update React to v16.x
+- update UI
+
 ## [v0.2.0]
 > June, 21, 2017
 
 - update webpack to v2.x
 - update react-router to v4.x
 - update react and react-dom
-- other package update 
+- other package update
 
 ## [v0.1.2]
 > Nov, 9, 2016

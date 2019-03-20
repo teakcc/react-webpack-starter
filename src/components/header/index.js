@@ -7,7 +7,7 @@ const Header = () => (
   <header className="site-header">
     <div className="navbar">
       <div className="logo">
-        <h1 className="text-logo"><Link to="/">React Webpack</Link></h1>
+        <h1 className="text-logo"><Link to="/">React Webpack Starter</Link></h1>
       </div>
       <ul className="top-menu">
         <li><Link to="/">HOME</Link></li>
@@ -20,7 +20,7 @@ const Header = () => (
       </ul> */}
     </div>
     <div className="site-info">
-      <h1 className="title">React Webpack SPA</h1>
+      <h1 className="title">React Webpack Starter</h1>
       <p className="description">A single page application using React, Webpack, ES6, Babel and so on</p>
     </div>
   </header>

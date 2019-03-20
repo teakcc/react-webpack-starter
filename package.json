@@ -1,18 +1,18 @@
 {
-  "name": "react-webpack-spa",
+  "name": "react-webpack-starter",
   "version": "1.0.0",
   "description": "A single page application using React, Webpack, ES6, Babel and so on.",
   "main": "index.js",
   "scripts": {
-    "server": "NODE_ENV=production node server.js",
-    "start": "webpack-dev-server --config ./webpack.dev.config.js --inline --hot --progress --colors",
-    "build:test": "webpack --config ./webpack.testing.config.js --progress --colors",
-    "build": "webpack --config ./webpack.prod.config.js --progress --colors",
+    "start": "NODE_ENV=production node server.js",
+    "dev": "webpack-dev-server --config ./webpack.dev.config.js",
+    "build:test": "webpack --config ./webpack.testing.config.js",
+    "build": "webpack --config ./webpack.prod.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wangchi/react-webpack-spa.git"
+    "url": "git+https://github.com/wangchi/react-webpack-starter.git"
   },
   "keywords": [
     "react",
@@ -22,9 +22,9 @@
   "author": "Wang Chi <hiwangchi@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wangchi/react-webpack-spa/issues"
+    "url": "https://github.com/wangchi/react-webpack-starter/issues"
   },
-  "homepage": "https://github.com/wangchi/react-webpack-spa#readme",
+  "homepage": "https://github.com/wangchi/react-webpack-starter#readme",
   "dependencies": {
     "express": "^4.15.3",
     "react": "^16.4.1",
