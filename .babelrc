@@ -1,9 +1,13 @@
 {
   "presets": [
-    "env",
-    "react"
+    ["@babel/env", {
+      "modules": false
+    }],
+    "@babel/react"
   ],
   "plugins": [
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-syntax-dynamic-import",
     "react-hot-loader/babel"
   ]
 }

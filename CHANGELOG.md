@@ -1,3 +1,9 @@
+## [v1.0.2]
+> Mar, 20, 2019
+
+- update to babel7
+- support dynamic import
+
 ## [v1.0.1]
 > Mar, 20, 2019
 

@@ -12,5 +12,11 @@ module.exports = Object.assign(baseConfig, {
     inline: true,
     hot: true,
     historyApiFallback: true
+  },
+  resolve: {
+    extensions: ['.js', '.jsx', '.json'],
+    alias: {
+      'react-dom': '@hot-loader/react-dom'
+    }
   }
 });

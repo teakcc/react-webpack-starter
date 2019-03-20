@@ -8,13 +8,14 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import routes from './router';
 
 import Header from './components/header';
+import Footer from './components/footer';
 
 class App extends Component {
   render() {
     return (
       <Router>
         <Fragment>
-          <Header></Header>
+          <Header/>
           {
             routes.map((route, i) => (
               <Route
@@ -26,6 +27,7 @@ class App extends Component {
                 )}/>
             ))
           }
+          <Footer/>
         </Fragment>
       </Router>
     );

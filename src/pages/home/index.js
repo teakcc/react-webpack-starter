@@ -1,20 +1,24 @@
 import './index.scss';
 
 import React, { Component } from 'react';
-// import TopBanner from '../../components/top-banner';
+import Loadable from 'react-loadable';
 import Content from '../../components/content';
-import Footer from '../../components/footer';
+import Loading from '../../components/Loading';
+// import List from './List';
+
+const AsyncList = Loadable({
+  loader: () => import('./List'),
+  // loader: () => Promise.resolve(require('./List.js')),
+  loading: Loading
+});
 
 class Home extends Component {
   render() {
     return (
-      <div>
-        {/* <TopBanner/> */}
-        <Content>
-          <div className="placeholder">Home Content</div>
-        </Content>
-        <Footer/>
-      </div>
+      <Content>
+        <div className="placeholder">Home Content</div>
+        <AsyncList/>
+      </Content>
     );
   }
 }
