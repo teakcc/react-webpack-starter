@@ -29,5 +29,8 @@
     "no-console": 0,
     "getter-return": 0,
     "for-direction": 0
+  },
+  "globals": {
+    "Promise": true
   }
 }

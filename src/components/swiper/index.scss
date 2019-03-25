@@ -1,0 +1,15 @@
+.swiper {
+  .carousel-item {
+    height: 460px;
+
+    .swiper-pic {
+      height: 460px;
+      background: #eee no-repeat center center;
+      background-size: cover;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}

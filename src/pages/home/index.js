@@ -6,6 +6,8 @@ import Content from '../../components/content';
 import Loading from '../../components/Loading';
 // import List from './List';
 
+import Swiper from '../../components/swiper';
+
 const AsyncList = Loadable({
   loader: () => import('./List'),
   // loader: () => Promise.resolve(require('./List.js')),
@@ -15,10 +17,13 @@ const AsyncList = Loadable({
 class Home extends Component {
   render() {
     return (
-      <Content>
-        <div className="placeholder">Home Content</div>
-        <AsyncList/>
-      </Content>
+      <>
+        <Swiper/>
+        <Content>
+          <div className="placeholder">Home Content</div>
+          <AsyncList/>
+        </Content>
+      </>
     );
   }
 }
