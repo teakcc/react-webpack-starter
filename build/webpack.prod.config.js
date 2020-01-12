@@ -56,8 +56,8 @@ const testingConfig = {
         // },
         // 自动处理
         default: {
-          name: 'common',
-          test: /[\\/]node_modules[\\/]|app\/common/,
+          name: 'vendor',
+          test: /[\\/]node_modules[\\/]/,
           chunks: 'initial',
           priority: 1,
         },

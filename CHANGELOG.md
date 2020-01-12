@@ -3,6 +3,8 @@
 > Jan, 11, 2020
 
 - rebuild webpack config
+- support dynamic import
+- update React to 16.12.0
 
 ## [v1.0.2]
 
