@@ -6,4 +6,4 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.css';
 // import './styles/index.scss';
 
-render(<App/>, document.getElementById('app'));
+render(<App />, document.getElementById('root'));

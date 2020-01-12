@@ -12,13 +12,14 @@ const devConfig = {
     port: 3001,
     inline: true,
     hot: true,
-    historyApiFallback: true
+    historyApiFallback: true,
+    disableHostCheck: true,
   },
   resolve: {
     alias: {
-      'react-dom': '@hot-loader/react-dom'
-    }
-  }
+      'react-dom': '@hot-loader/react-dom',
+    },
+  },
 };
 
 module.exports = merge(baseConfig, devConfig);

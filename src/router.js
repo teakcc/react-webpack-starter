@@ -8,20 +8,20 @@ const routes = [
   {
     path: '/',
     exact: true,
-    component: Home
+    component: Home,
   },
   {
     path: '/components',
-    component: Components
+    component: Components,
   },
   {
     path: '/documents',
-    component: Documents
+    component: Documents,
   },
   {
     path: '/login',
-    component: Login
-  }
+    component: Login,
+  },
 ];
 
 export default routes;

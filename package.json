@@ -4,10 +4,10 @@
   "description": "A single page application using React, Webpack, ES6, Babel and so on.",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=production node server.js",
-    "dev": "webpack-dev-server --config ./webpack.dev.config.js",
-    "build:test": "webpack --config ./webpack.testing.config.js",
-    "build": "webpack --config ./webpack.prod.config.js",
+    "start": "NODE_ENV=development webpack-dev-server --config ./build/webpack.dev.config.js",
+    "build:test": "NODE_ENV=testing webpack --config ./build/webpack.testing.config.js",
+    "build": "NODE_ENV=production webpack --config ./build/webpack.prod.config.js",
+    "serve": "NODE_ENV=production node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,6 +28,7 @@
   "dependencies": {
     "babel-runtime": "^6.26.0",
     "bootstrap": "^4.3.1",
+    "clean-webpack-plugin": "^3.0.0",
     "express": "^4.15.3",
     "prop-types": "^15.7.2",
     "react": "^16.4.1",
@@ -46,12 +47,13 @@
     "@hot-loader/react-dom": "^16.8.4",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
-    "clean-webpack-plugin": "^2.0.1",
     "css-loader": "^0.28.11",
     "eslint": "^5.15.3",
     "eslint-plugin-react": "^7.12.4",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
     "mini-css-extract-plugin": "^0.4.0",
     "node-sass": "^4.9.0",
     "optimize-css-assets-webpack-plugin": "^4.0.3",
