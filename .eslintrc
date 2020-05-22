@@ -27,6 +27,7 @@
     "react/display-name": 0
   },
   "globals": {
-    "Promise": true
+    "Promise": true,
+    "NODE_ENV": true
   }
 }

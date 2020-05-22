@@ -1,34 +1,31 @@
 import React, { Component } from 'react';
 
 import './list.scss';
+import { fetchList } from '../../utils';
 
-export default class List extends Component  {
+export default class List extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      list: []
+      list: [],
     };
   }
 
-  request() {
-    // mock request
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        let data = [
-          { title: 'item1' },
-          { title: 'item2' },
-          { title: 'item3' }
-        ];
-        resolve(data);
-      }, 500);
-    });
-  }
+  // request() {
+  //   // mock request
+  //   return new Promise((resolve) => {
+  //     setTimeout(() => {
+  //       let data = [{ title: 'item1' }, { title: 'item2' }, { title: 'item3' }];
+  //       resolve(data);
+  //     }, 500);
+  //   });
+  // }
 
   async fetchList() {
-    let res = await this.request();
+    let res = await fetchList();
 
     this.setState({
-      list: res
+      list: res,
     });
   }
 
@@ -43,9 +40,7 @@ export default class List extends Component  {
   render() {
     return (
       <div className="lists">
-        <ul>
-          {this.listBuilder()}
-        </ul>
+        <ul>{this.listBuilder()}</ul>
       </div>
     );
   }

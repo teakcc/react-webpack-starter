@@ -4,6 +4,7 @@
 
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 const config = {
   publicPath: 'http://127.0.0.1:3001/',
@@ -69,6 +70,9 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpack.DefinePlugin({
+      NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+    }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
