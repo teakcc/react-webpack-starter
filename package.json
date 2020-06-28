@@ -1,5 +1,5 @@
 {
-  "name": "react-webpack-starter",
+  "name": "react-admin",
   "version": "1.0.0",
   "description": "A single page application using React, Webpack, ES6, Babel and so on.",
   "main": "index.js",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wangchi/react-webpack-starter.git"
+    "url": "git+https://github.com/wangchi/react-admin.git"
   },
   "keywords": [
     "react",
@@ -22,9 +22,9 @@
   "author": "Wang Chi <hiwangchi@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wangchi/react-webpack-starter/issues"
+    "url": "https://github.com/wangchi/react-admin/issues"
   },
-  "homepage": "https://github.com/wangchi/react-webpack-starter#readme",
+  "homepage": "https://github.com/wangchi/react-admin#readme",
   "dependencies": {
     "babel-runtime": "^6.26.0",
     "bootstrap": "^4.5.0",
