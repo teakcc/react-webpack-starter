@@ -2,9 +2,9 @@
   position: relative;
   width: 100%;
   height: 500px;
-  background: #24282C url(../../images/adi-constantin-65004-unsplash.jpg) no-repeat center center;
+  background: #24282c url(../../images/adi-constantin-65004-unsplash.jpg)
+    no-repeat center center;
   background-size: cover;
-
 
   &:before {
     content: '';
@@ -13,7 +13,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(0, 0, 0, 0.2);
   }
 
   .navbar {
@@ -34,7 +34,7 @@
         a {
           color: #fff;
           &:hover {
-            opacity: .8;
+            opacity: 0.8;
           }
         }
       }
@@ -55,7 +55,7 @@
         color: #fff;
 
         &:hover {
-          opacity: .8;
+          opacity: 0.8;
         }
       }
     }

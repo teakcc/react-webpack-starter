@@ -12,7 +12,7 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  Collapse
+  Collapse,
 } from 'reactstrap';
 
 class Header extends React.Component {
@@ -20,13 +20,13 @@ class Header extends React.Component {
     super(props);
 
     this.state = {
-      isOpen: false
+      isOpen: false,
     };
   }
 
   toggle() {
     this.setState({
-      isOpen: !this.state.isOpen
+      isOpen: !this.state.isOpen,
     });
   }
 
@@ -39,32 +39,34 @@ class Header extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <Link className="nav-link" to="/">Home</Link>
+                <Link className="nav-link" to="/">
+                  Home
+                </Link>
               </NavItem>
               <NavItem>
-                <Link className="nav-link" to="/components">Components</Link>
+                <Link className="nav-link" to="/components">
+                  Components
+                </Link>
               </NavItem>
               <NavItem>
-                <Link className="nav-link" to="/documents">Documents</Link>
+                <Link className="nav-link" to="/documents">
+                  Documents
+                </Link>
               </NavItem>
               <NavItem>
-                <Link className="nav-link" to="/login">Login</Link>
+                <Link className="nav-link" to="/login">
+                  Login
+                </Link>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   More
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <DropdownItem>
-                    Option 1
-                  </DropdownItem>
-                  <DropdownItem>
-                    Option 2
-                  </DropdownItem>
-                  <DropdownItem divider/>
-                  <DropdownItem>
-                    Reset
-                  </DropdownItem>
+                  <DropdownItem>Option 1</DropdownItem>
+                  <DropdownItem>Option 2</DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>Reset</DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
             </Nav>
