@@ -3,7 +3,7 @@
  */
 
 const baseConfig = require('./webpack.base.config.js');
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 
 const devConfig = {
   mode: 'development',
