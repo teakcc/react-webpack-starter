@@ -8,7 +8,7 @@ class Documents extends Component {
   render() {
     return (
       <>
-        <ContentTitle title="Documents"/>
+        <ContentTitle title="Documents" />
         <Content>
           <div className="documents placeholder">Documents</div>
         </Content>

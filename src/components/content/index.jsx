@@ -7,18 +7,14 @@ import { Container } from 'reactstrap';
 
 export default class Content extends Component {
   render() {
-    return (
-      <Container className="content">
-        { this.props.children }
-      </Container>
-    );
+    return <Container className="content">{this.props.children}</Container>;
   }
 }
 
 Content.propTypes = {
-  children: PropTypes.any
+  children: PropTypes.any,
 };
 
 Content.defaulProps = {
-  children: []
+  children: [],
 };

@@ -5,18 +5,14 @@ import './index.scss';
 
 export default class ContentTitle extends Component {
   render() {
-    return (
-      <div className="content-title">
-        { this.props.title }
-      </div>
-    );
+    return <div className="content-title">{this.props.title}</div>;
   }
 }
 
 ContentTitle.propTypes = {
-  title: PropTypes.string
+  title: PropTypes.string,
 };
 
 ContentTitle.defaultProps = {
-  title: 'Undefined Title'
+  title: 'Undefined Title',
 };
