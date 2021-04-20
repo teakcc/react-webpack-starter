@@ -2,7 +2,8 @@
  * css reset
  */
 
-$font-default: 14px/1.5 'Helvetica Neue', Helvetica,Arial, 'Microsoft Yahei', 'Hiragino Sans GB', 'Heiti SC', 'WenQuanYi Micro Hei', sans-serif;
+$font-default: 14px/1.5 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei',
+  'Hiragino Sans GB', 'Heiti SC', 'WenQuanYi Micro Hei', sans-serif;
 
 body,
 h1,
@@ -52,11 +53,18 @@ textarea {
   -ms-overflow-style: scrollbar;
 }
 
-address, cite, dfn, em, var {
+address,
+cite,
+dfn,
+em,
+var {
   font-style: normal;
 }
 
-code, kbd, pre, samp {
+code,
+kbd,
+pre,
+samp {
   font-family: courier new, courier, monospace;
 }
 

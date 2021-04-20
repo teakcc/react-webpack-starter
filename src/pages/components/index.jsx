@@ -8,7 +8,7 @@ class Components extends Component {
   render() {
     return (
       <>
-        <ContentTitle title="Components"/>
+        <ContentTitle title="Components" />
         <Content>
           <div className="components placeholder">Components</div>
         </Content>

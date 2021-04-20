@@ -10,18 +10,17 @@ import Swiper from '../../components/swiper';
 
 const AsyncList = Loadable({
   loader: () => import('./List'),
-  // loader: () => Promise.resolve(require('./List.js')),
-  loading: Loading
+  loading: Loading,
 });
 
 class Home extends Component {
   render() {
     return (
       <>
-        <Swiper/>
+        <Swiper />
         <Content>
           <div className="placeholder">Home Content</div>
-          <AsyncList/>
+          <AsyncList />
         </Content>
       </>
     );

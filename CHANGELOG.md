@@ -1,3 +1,10 @@
+## [v2.0.0]
+
+> Nov, 14, 2020
+
+- upgrade to webpack v5
+- upgrade React to 17
+
 ## [v1.1.0]
 
 > Jan, 11, 2020

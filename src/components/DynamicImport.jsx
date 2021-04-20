@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const DynamicImport = props => {
+const DynamicImport = (props) => {
   const LazyComponent = React.lazy(props.loader);
   return (
     <React.Suspense fallback={props.loading}>
